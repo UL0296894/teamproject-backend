@@ -1,0 +1,39 @@
+{
+  "name": "teamproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn --transpile-only --exit-child src/app.ts",
+    "seed": "ts-node --esm src/utils/seed.ts",
+    "dev2": "nodemon --exec node --loader ts-node/esm src/app.ts",
+    "clean": "rimraf dist",
+    "db:generate": "npx prisma generate",
+    "build": "npm run clean && tsc",
+    "start": "node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.8.4",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.5.0",
+    "@fastify/jwt": "^8.0.1",
+    "@prisma/client": "^6.0.1",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "fastify-swagger": "^5.2.0",
+    "fastify-zod": "^1.4.0",
+    "ky": "^1.7.2",
+    "nodemon": "^3.1.7",
+    "zod": "^3.23.8",
+    "zod-to-json-schema": "^3.23.5"
+  }
+}

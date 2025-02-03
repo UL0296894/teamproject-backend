@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --respawn --transpile-only --exit-child src/app.ts",
-    "seed": "ts-node --esm src/utils/seed.ts",
+    "seed": "npx ts-node src/utils/seed.ts",
     "dev2": "nodemon --exec node --loader ts-node/esm src/app.ts",
     "clean": "rimraf dist",
     "db:generate": "npx prisma generate",
@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chance": "^1.1.6",
     "@types/node": "^22.8.4",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
@@ -27,6 +28,7 @@
     "@fastify/jwt": "^8.0.1",
     "@prisma/client": "^6.0.1",
     "axios": "^1.7.7",
+    "chance": "^1.1.12",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.1",
     "fastify-swagger": "^5.2.0",
